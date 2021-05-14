@@ -1,7 +1,7 @@
 {
   "name": "react-typescript",
   "version": "1.0.0",
-  "description": "React and TypeScript example starter project",
+  "description": "email sig generator",
   "keywords": [
     "typescript",
     "react",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "run build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
