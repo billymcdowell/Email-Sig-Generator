@@ -3,7 +3,15 @@ import "./styles.css";
 import { useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { Button, Container, TextField } from "@material-ui/core";
+import {
+  Button,
+  Container,
+  TextField,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl
+} from "@material-ui/core";
 import { CheckOutlined, FileCopyOutlined } from "@material-ui/icons";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import green from "@material-ui/core/colors/green";
@@ -11,6 +19,7 @@ import green from "@material-ui/core/colors/green";
 interface iState {
   fullName: string;
   position: string;
+  address: string;
   mobile: string;
   phone: string;
   copied: boolean;
@@ -19,6 +28,7 @@ interface iState {
 const initialState: iState = {
   fullName: "",
   position: "",
+  address: "",
   mobile: "",
   phone: "",
   copied: false
@@ -69,7 +79,7 @@ export default function App() {
   };
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+    event: any
   ) => {
     setState((prevState) => ({
       ...prevState,
@@ -116,6 +126,36 @@ export default function App() {
                     onChange={handleChange}
                     color={"primary"}
                   />
+                  <FormControl required style={{ width: "100%" }}>
+                    <InputLabel>Office Location</InputLabel>
+                    <Select
+                      autoWidth
+                      name={"address"}
+                      value={state.address}
+                      onChange={handleChange}
+                    >
+                      <MenuItem
+                        value={
+                          "Broadgate Quarter, 7th Floor, One Snowden Street, London EC2A 2DQ"
+                        }
+                      >
+                        London
+                      </MenuItem>
+                      <MenuItem
+                        value={"93 Longwater Circle, Norwell, MA  02061"}
+                      >
+                        Boston
+                      </MenuItem>
+                      <MenuItem
+                        value={
+                          "54 Fitzwilliam Square, Dublin 2, D02 X308, Ireland"
+                        }
+                      >
+                        Dublin
+                      </MenuItem>
+                      <MenuItem value={"Remote"}>Remote</MenuItem>
+                    </Select>
+                  </FormControl>
                   <TextField
                     fullWidth={true}
                     required
@@ -187,8 +227,7 @@ export default function App() {
                           marginBottom: 0
                         }}
                       >
-                        Broadgate Quarter, 7th Floor, One Snowden Street, London
-                        EC2A 2DQ
+                        {state.address}
                       </p>
                       <p
                         style={{
