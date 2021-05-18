@@ -237,7 +237,7 @@ export default function App() {
                         <br />
                         <a href="https://www.youtube.com/channel/UCsMyFt94Jyfwo-ecLBpy5xw">
                           <img
-                            src="https://uploads-ssl.webflow.com/607ef0e541214f045ac8c6dc/608aaf39ca0061647486728e_youtube.svg"
+                            src="https://uploads-ssl.webflow.com/607ef0e541214f045ac8c6dc/609e7c52a6e283df61fc0489_Youtube.png"
                             style={{
                               width: "100%",
                               maxWidth: "32px",
@@ -251,7 +251,7 @@ export default function App() {
                         </a>
                         <a href="https://twitter.com/AcadiaSoft_">
                           <img
-                            src="https://assets-global.website-files.com/607ef0e541214f045ac8c6dc/608aaf3986e1841e1fd234c4_twitter.svg"
+                            src="https://uploads-ssl.webflow.com/607ef0e541214f045ac8c6dc/609e7c51e24e660901fc6a36_Twitter.png"
                             style={{
                               width: "100%",
                               maxWidth: "32px",
@@ -265,7 +265,7 @@ export default function App() {
                         </a>
                         <a href="https://www.linkedin.com/company/acadiasoft-inc">
                           <img
-                            src="https://assets-global.website-files.com/607ef0e541214f045ac8c6dc/608aaf39f3d2f9232cbc8236_linkedin.svg"
+                            src="https://uploads-ssl.webflow.com/607ef0e541214f045ac8c6dc/609e7c5165fead4ae049e0d7_Linkedin.png"
                             style={{
                               width: "100%",
                               maxWidth: "32px",
