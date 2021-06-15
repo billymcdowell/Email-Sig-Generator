@@ -157,8 +157,6 @@ export default function App() {
                             <MenuItem value={"Sales EMEA"}>Sales EMEA</MenuItem>
                             <MenuItem value={"Strategic Clients"}>Strategic Clients</MenuItem>
                             <MenuItem value={"UX"}>UX</MenuItem>
-
-
                     </Select>
                   </FormControl>
                   <FormControl required style={{ width: "100%" }}>
@@ -169,26 +167,14 @@ export default function App() {
                       value={state.address}
                       onChange={handleChange}
                     >
-                      <MenuItem
-                        value={
-                          "Broadgate Quarter, 7th Floor, One Snowden Street, London EC2A 2DQ"
-                        }
-                      >
-                        London
-                      </MenuItem>
-                      <MenuItem
-                        value={"93 Longwater Circle, Norwell, MA  02061"}
-                      >
-                        Boston
-                      </MenuItem>
-                      <MenuItem
-                        value={
-                          "54 Fitzwilliam Square, Dublin 2, D02 X308, Ireland"
-                        }
-                      >
-                        Dublin
-                      </MenuItem>
-                      <MenuItem value={"Remote"}>Remote</MenuItem>
+                      <MenuItem value={"93 Longwater Circle, Norwell, MA  02061"}>Boston</MenuItem>
+                      <MenuItem value={"54 Fitzwilliam Square, Dublin 2, D02 X308, Ireland"}>Dublin</MenuItem>
+                      <MenuItem value={"Maurenbrecherstrasse 16, 47803 Krefeld, Deutschland"}>Düsseldorf</MenuItem>
+                      <MenuItem value={"Broadgate Quarter, 7th Floor, One Snowden Street, London EC2A 2DQ"}>London</MenuItem>
+                      <MenuItem value={"Unit 1801 The Peak Tower, 107 L.P. Leviste Street, Salcedo Village, Makati City, Philippines, 1227"}>Manila</MenuItem>
+                      <MenuItem value={"1450 Broadway 7th Floor, New York, NY 10018"}>New York</MenuItem>
+                      <MenuItem value={""}>Other</MenuItem>
+                      <MenuItem value={"Level 11 Aoyama Palacio Tower, 3-6-7 Kita-Aoyama Minato-Ku, Tokyo 107 - 0061, Japan"}>Tokyo</MenuItem>
                     </Select>
                   </FormControl>
                   <TextField
