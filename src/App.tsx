@@ -134,25 +134,31 @@ export default function App() {
                       value={state.position}
                       onChange={handleChange}
                     >
-                      <MenuItem
-                        value={
-                          "Sales & Marketing"
-                        }
-                      >
-                        Sales &amp; Marketing
-                      </MenuItem>
-                      <MenuItem
-                        value={"DevOps"}
-                      >
-                        DevOps
-                      </MenuItem>
-                      <MenuItem
-                        value={
-                          "Client Services"
-                        }
-                      >
-                        Client Services
-                      </MenuItem>
+                            <MenuItem value={"Client Service & Integration"}>Client Service &amp; Integration</MenuItem>
+                            <MenuItem value={"Community Development"}>Community Development</MenuItem>
+                            <MenuItem value={"Corporate Development"}>Corporate Development</MenuItem>
+                            <MenuItem value={"Data Integrations"}>Data Integrations</MenuItem>
+                            <MenuItem value={"Development"}>Development</MenuItem>
+                            <MenuItem value={"DevOps"}>DevOps</MenuItem>
+                            <MenuItem value={"Finance"}>Finance</MenuItem>
+                            <MenuItem value={"Human Resources"}>Human Resources</MenuItem>
+                            <MenuItem value={"Industry & Regulatory Strategy"}>Industry &amp; Regulatory Strategy</MenuItem>
+                            <MenuItem value={"Legal"}>Legal</MenuItem>
+                            <MenuItem value={"Marketing"}>Marketing</MenuItem>
+                            <MenuItem value={"Onboarding"}>Onboarding</MenuItem>
+                            <MenuItem value={"Product Development"}>Product Development</MenuItem>
+                            <MenuItem value={"Project Management"}>Project Management</MenuItem>
+                            <MenuItem value={"Quality Assurance"}>Quality Assurance</MenuItem>
+                            <MenuItem value={"Quantitative Services"}>Quantitative Services </MenuItem>
+                            <MenuItem value={"Quaternion - Expert Services"}>Quaternion - Expert Services</MenuItem>
+                            <MenuItem value={"Risk & Compliance"}>Risk &amp; Compliance</MenuItem>
+                            <MenuItem value={"Sales Americas"}>Sales Americas</MenuItem>
+                            <MenuItem value={"Sales APAC"}>Sales APAC</MenuItem>
+                            <MenuItem value={"Sales EMEA"}>Sales EMEA</MenuItem>
+                            <MenuItem value={"Strategic Clients"}>Strategic Clients</MenuItem>
+                            <MenuItem value={"UX"}>UX</MenuItem>
+
+
                     </Select>
                   </FormControl>
                   <FormControl required style={{ width: "100%" }}>
