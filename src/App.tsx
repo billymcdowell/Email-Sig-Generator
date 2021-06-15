@@ -117,22 +117,14 @@ export default function App() {
                     color={"primary"}
                     autoFocus={true}
                   />
-<<<<<<< HEAD
                   {/* <TextField
                     fullWidth={true}
                     required
                     label="Department"
-=======
-                  <TextField
-                    fullWidth={true}
-                    required
-                    label="Position"
->>>>>>> 36dd51af03ba9d259d25a5ba92686607f5655632
                     value={state.position}
                     name={"position"}
                     onChange={handleChange}
                     color={"primary"}
-<<<<<<< HEAD
                   /> */}
                   <FormControl required style={{ width: "100%" }}>
                     <InputLabel>Department</InputLabel>
@@ -163,9 +155,6 @@ export default function App() {
                       </MenuItem>
                     </Select>
                   </FormControl>
-=======
-                  />
->>>>>>> 36dd51af03ba9d259d25a5ba92686607f5655632
                   <FormControl required style={{ width: "100%" }}>
                     <InputLabel>Office Location</InputLabel>
                     <Select
