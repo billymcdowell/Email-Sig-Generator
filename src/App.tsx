@@ -86,6 +86,24 @@ export default function App() {
       [event.target.name]: event.target.value
     }));
   };
+
+  var phoneHelperText;
+  if (state.address === "93 Longwater Circle, Norwell, MA  02061" || state.address === "1450 Broadway 7th Floor, New York, NY 10018" ) {
+    phoneHelperText = "617 501 5504"
+  } else if (state.address === "54 Fitzwilliam Square, Dublin 2, D02 X308, Ireland") {
+    phoneHelperText = "+353 1 634 4444"
+  } else if (state.address === "Maurenbrecherstrasse 16, 47803 Krefeld, Deutschland") {
+    phoneHelperText = "+49 2151 928 4800"
+  } else if (state.address === "Broadgate Quarter, 7th Floor, One Snowden Street, London EC2A 2DQ") {
+    phoneHelperText = "+44 (0)203 555 4444"
+  } else if (state.address === "Level 11 Aoyama Palacio Tower, 3-6-7 Kita-Aoyama Minato-Ku, Tokyo 107 - 0061, Japan" || state.address === "Unit 1801 The Peak Tower, 107 L.P. Leviste Street, Salcedo Village, Makati City, Philippines, 1227") {
+    phoneHelperText = "+81 3 5778 5555"
+  } else {
+    phoneHelperText = ""
+}
+
+
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
@@ -185,6 +203,8 @@ export default function App() {
                     name={"phone"}
                     onChange={handleChange}
                     color={"primary"}
+                    helperText={phoneHelperText ? "No dots. No dashes. Please follow this example: " + phoneHelperText : "No dots. No dashes."}
+                  
                   />
                   <TextField
                     fullWidth={true}
