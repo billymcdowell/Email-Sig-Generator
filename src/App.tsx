@@ -204,7 +204,6 @@ export default function App() {
                     name={"email"}
                     onChange={handleChange}
                     color={"primary"}
-                    autoFocus={true}
                   />
                   <TextField
                     fullWidth={true}
