@@ -20,6 +20,7 @@ interface iState {
   fullName: string;
   position: string;
   address: string;
+  email: string;
   mobile: string;
   phone: string;
   copied: boolean;
@@ -29,6 +30,7 @@ const initialState: iState = {
   fullName: "",
   position: "",
   address: "",
+  email:"",
   mobile: "",
   phone: "",
   copied: false
@@ -197,6 +199,15 @@ export default function App() {
                   </FormControl>
                   <TextField
                     fullWidth={true}
+                    label="Email"
+                    value={state.email}
+                    name={"email"}
+                    onChange={handleChange}
+                    color={"primary"}
+                    autoFocus={true}
+                  />
+                  <TextField
+                    fullWidth={true}
                     required
                     label="Office Phone"
                     value={state.phone}
@@ -234,7 +245,7 @@ export default function App() {
                     <div className="signature">
                       <p
                         style={{
-                          fontFamily: "OpenSans-Semibold, Open Sans",
+                          fontFamily: "OpenSans-Semibold, Open Sans, Helvetica, sans-serif",
                           fontWeight: 600,
                           fontSize: "16px",
                           color: "#575756",
@@ -245,7 +256,7 @@ export default function App() {
                       </p>
                       <p
                         style={{
-                          fontFamily: "OpenSans-Semibold, Open Sans",
+                          fontFamily: "OpenSans-Semibold, Open Sans, Helvetica, sans-serif",
                           color: "#878787",
                           fontSize: "12px",
                           fontWeight: 600,
@@ -254,14 +265,14 @@ export default function App() {
                       >
                         {state.position}
                       </p>
-                      <img
+                      <a href="https://acadia.inc"><img
                         width="130"
                         src="https://assets-global.website-files.com/607ef0e541214f045ac8c6dc/6093ec57a84987a4c7b3619d_Acadia_logo_green.png"
                         alt=""
-                      />
+                      /></a>
                       <p
                         style={{
-                          fontFamily: "OpenSans-Semibold, Open Sans",
+                          fontFamily: "OpenSans-Semibold, Open Sans, Helvetica, sans-serif",
                           color: "#878787",
                           fontSize: "12px",
                           fontWeight: 600,
@@ -272,7 +283,7 @@ export default function App() {
                       </p>
                       <p
                         style={{
-                          fontFamily: "OpenSans-Semibold, Open Sans",
+                          fontFamily: "OpenSans-Semibold, Open Sans, Helvetica, sans-serif",
                           color: "#878787",
                           fontSize: "12px",
                           fontWeight: 600,
@@ -281,24 +292,38 @@ export default function App() {
                         }}
                       >
                         office
-                        <span style={{ color: "#575756" }}>
+                        <a style={{ color: "#575756", textDecoration: "none" }} href={`tel:${state.phone}`}>
                           {" "}
                           {state.phone}{" "}
-                        </span>
+                        </a>
                         {state.mobile ? "mobile" : ""}
                         {state.mobile ? (
-                          <span style={{ color: "#575756" }}>
+                          <a style={{ color: "#575756", textDecoration: "none" }} href={`tel:${state.mobile}`}>
                             {" "}
                             {state.mobile}
-                          </span>
+                          </a>
                         ) : (
                           ""
                         )}
                       </p>
                       <a
                         style={{
-                          textDecoration: "none !important",
-                          fontFamily: "OpenSans-Semibold, Open Sans",
+                          fontFamily: "OpenSans-Semibold, Open Sans, Helvetica, sans-serif",
+                          color: "rgb(87, 87, 86)",
+                          textDecoration: "none",
+                          fontSize: "12px",
+                          fontWeight: 600,
+                          marginTop: "4px",
+                          display: "block"
+                        }}
+                        href={`mailto:${state.email}`}
+                      >
+                        {state.email}
+                      </a>
+                      <a
+                        style={{
+                          textDecoration: "none",
+                          fontFamily: "OpenSans-Semibold, Open Sans, Helvetica, sans-serif",
                           fontSize: "12px"
                         }}
                         href="https://acadia.inc"
@@ -310,7 +335,7 @@ export default function App() {
                             textDecoration: "none !important"
                           }}
                         >
-                          www.acadia.inc
+                          acadia.inc
                         </span>
                       </a>
                       <div>
