@@ -442,7 +442,7 @@ export default function App() {
                     />
                   </Collapse>
                   <Box
-                    sx={{
+                    style={{
                       display: "flex",
                       marginTop: "1rem",
                       justifyContent: "space-between",
